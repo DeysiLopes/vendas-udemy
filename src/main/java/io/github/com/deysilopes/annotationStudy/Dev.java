@@ -1,4 +1,4 @@
-package io.github.com.deysilopes.sevice;
+package io.github.com.deysilopes.annotationStudy;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 

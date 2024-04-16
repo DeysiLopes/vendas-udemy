@@ -1,4 +1,4 @@
-package io.github.com.deysilopes;
+package io.github.com.deysilopes.annotationStudy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,6 +11,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Autowired
-@Qualifier("cachorro")
-public @interface Cachorro {
+@Qualifier("gato")
+public @interface Gato {
 }
