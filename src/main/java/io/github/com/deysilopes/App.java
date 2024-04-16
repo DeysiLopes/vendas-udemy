@@ -29,29 +29,29 @@ public class App {
             List<Cliente> todosClientes = clientes.obterTodos();
             todosClientes.forEach(System.out::println);
 
-            System.out.println("Atualizando clientes");
-            todosClientes.forEach(c -> {
-                c.setNome(c.getNome() + " atualizado");
-                clientes.atualizar(c);
-            });
-
-            todosClientes = clientes.obterTodos();
-            todosClientes.forEach(System.out::println);
-
-            System.out.println("Buscando clientes");
-            clientes.buscarPorNome("Raf").forEach(System.out::println);
+//            System.out.println("Atualizando clientes");
+//            todosClientes.forEach(c -> {
+//                c.setNome(c.getNome() + " atualizado");
+//                clientes.atualizar(c);
+//            });
+//
+//            todosClientes = clientes.obterTodos();
+//            todosClientes.forEach(System.out::println);
+//
+//            System.out.println("Buscando clientes");
+//            clientes.buscarPorNome("Raf").forEach(System.out::println);
 
 //            System.out.println("Deletando clientes");
 //            clientes.obterTodos().forEach(c -> {
 //                clientes.deletar(c.getId());
 //            });
 
-            todosClientes = clientes.obterTodos();
-            if (todosClientes.isEmpty()){
-                System.out.println("Nenhum cliente encontrado");
-            }else {
-                todosClientes.forEach(System.out::println);
-            }
+//            todosClientes = clientes.obterTodos();
+//            if (todosClientes.isEmpty()){
+//                System.out.println("Nenhum cliente encontrado");
+//            }else {
+//                todosClientes.forEach(System.out::println);
+//            }
         };
 
     }

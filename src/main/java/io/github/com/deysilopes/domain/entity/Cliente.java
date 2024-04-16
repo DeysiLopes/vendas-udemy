@@ -1,7 +1,7 @@
 package io.github.com.deysilopes.domain.entity;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table( name = "cliente" )
