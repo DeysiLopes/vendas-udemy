@@ -1,13 +1,24 @@
 package io.github.com.deysilopes.domain.entity;
 
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pedido")
 public class Pedido {
-   private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+    @Column(name = "data_pedidp")
     private LocalDate dataPedido;
-    private BigDecimal totalPedido;
+    @Column(name = "total", length = 20, precision = 2)
+    private BigDecimal total;
 
     public Integer getId() {
         return id;
@@ -33,11 +44,11 @@ public class Pedido {
         this.dataPedido = dataPedido;
     }
 
-    public BigDecimal getTotalPedido() {
-        return totalPedido;
+    public BigDecimal getTotal() {
+        return total;
     }
 
-    public void setTotalPedido(BigDecimal totalPedido) {
-        this.totalPedido = totalPedido;
+    public void setTotal(BigDecimal total) {
+        this.total = total;
     }
 }
