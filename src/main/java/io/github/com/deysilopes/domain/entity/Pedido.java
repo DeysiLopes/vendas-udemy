@@ -18,8 +18,17 @@ public class Pedido {
     private Cliente cliente;
     @Column(name = "data_pedidp")
     private LocalDate dataPedido;
-    @Column(name = "total", length = 20, precision = 2)
+    @Column(name = "total", precision = 20, scale = 2)
     private BigDecimal total;
+
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "id=" + id +
+                ", dataPedido=" + dataPedido +
+                ", total=" + total +
+                '}';
+    }
 
     public List<ItemPedido> getItens() {
         return itens;
