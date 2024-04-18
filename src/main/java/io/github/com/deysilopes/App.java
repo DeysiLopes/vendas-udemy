@@ -37,11 +37,11 @@ public class App {
 
             pedidoRepository.save(pedido);
 
-//            Cliente clienteFetchPedidos = clienteRepository.findClienteFetchPedidos(deysi.getId());
-//            System.out.println(clienteFetchPedidos);
-//            System.out.println(clienteFetchPedidos.getPedidos());
+            Cliente clienteFetchPedidos = clienteRepository.findClienteFetchPedidos(deysi.getId());
+            System.out.println(clienteFetchPedidos);
+            System.out.println(clienteFetchPedidos.getPedidos()); 
 
-            pedidoRepository.findByCliente(deysi).forEach(System.out::println);
+//            pedidoRepository.findByCliente(deysi).forEach(System.out::println);
         };
 
     }
